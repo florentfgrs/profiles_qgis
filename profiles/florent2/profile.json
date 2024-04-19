@@ -24,7 +24,7 @@
         "all": [
           {
             "path": "$.date.current_year",
-            "value": "2023",
+            "value": 2023,
             "operator": "equal"
           }
         ]

@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/profile/qgis_profile.json",
-  "name": "Florent2",
-  "folder_name": "Florent2",
+  "name": "florent2",
+  "folder_name": "florent2",
   "description": "Profil QGIS Florent2",
   "author": "Florent Fougères",
   "qgisMinimumVersion": "3.28.0",

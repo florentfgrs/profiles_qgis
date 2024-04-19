@@ -18,14 +18,14 @@
   ],
   "rules": [
     {
-      "name": "Year",
-      "description": "Profile de 2023",
+      "name": "Environment",
+      "description": "Profile is configured to run only on Linux.",
       "conditions": {
         "all": [
           {
             "path": "$.date.current_year",
             "value": 2023,
-            "operator": "greater_than_inclusive"
+            "operator": "equal"
           }
         ]
       }

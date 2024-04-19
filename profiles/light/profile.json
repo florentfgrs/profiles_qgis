@@ -23,7 +23,7 @@
       "conditions": {
         "all": [
           {
-            "path": "$.environment.current_year",
+            "path": "$.current_year",
             "value": "2024",
             "operator": "equal"
           }

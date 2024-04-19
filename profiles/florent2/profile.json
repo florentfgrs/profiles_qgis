@@ -15,5 +15,20 @@
       "plugin_id": 3192,
       "version": "0.6.2"
     }
+  ],
+  "rules": [
+    {
+      "name": "Year",
+      "description": "Profile de 2023",
+      "conditions": {
+        "all": [
+          {
+            "path": "$.environment.current_year",
+            "value": "2023",
+            "operator": "equal"
+          }
+        ]
+      }
+    }
   ]
 }

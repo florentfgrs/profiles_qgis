@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Guts/qgis-deployment-cli/main/docs/schemas/profile/qgis_profile.json",
+  "name": "light",
+  "folder_name": "light",
+  "description": "Profil QGIS light",
+  "author": "Florent Fougères",
+  "qgisMinimumVersion": "3.28.0",
+  "qgisMaximumVersion": "3.99.0",
+  "version": "0.1.0",
+  "plugins": [
+    {
+      "name": "QDuckDB",
+      "folder_name": "qduckdb",
+      "official_repository": true,
+      "plugin_id": 3192,
+      "version": "0.6.2"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+metadata:
+  title: "Scenario de deploiement des profils de Florent"
+  id: scenario-florent
+  description: >-
+    Scénario de QGIS Deployment Toolbelt qui
+    déploie les profils de Florent
+
+settings:
+  SCENARIO_VALIDATION: true
+
+steps:
+  - name: Téléchargement des profils depuis un repo git
+    uses: qprofiles-downloader
+    with:
+      source: https://github.com/florentfgrs/profiles_qgis.git
+      protocol: git_remote
+      branch: main
+
+  - name: Synchronisation des profiles
+    uses: qprofiles-synchronizer
+    with:
+      sync_mode: overwrite
+
+  - name: Téléchargement des plugins
+    uses: qplugins-downloader
+    with:
+      force: false
+      threads: 5
+
+  - name: Synchronise les plugins téléchargés avec ceux présents dans les profils installés
+    uses: qplugins-synchronizer
+    with:
+      action: create_or_restore
+
+  - name: Créer des raccourcis pour les profils
+    uses: shortcuts-manager
+    with:
+      action: create_or_restore
+      include:
+        - profile: light
+          label: "Light"
+          desktop: true
+          start_menu: true
+        - profile: florent2
+          label: "Florent2"
+          desktop: true
+          start_menu: true
+
+  # - name: Set splash screen
+  #   uses: splash-screen-manager
+  #   with:
+  #     action: create_or_restore
+  #     strict: false
